@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    </head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li class="contact-button"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="flex-container" id="home">
+    <div class="flex-item"><p class="home">Mouli Gangadhar Pedireddy<br>
+            <p class="ho">IoT Developer | Front end | Enterprenur | Innovator</p><br>
+         <a href="C:\Users\mk\OneDrive\Desktop\resume of mouli gangadhar pedireddy (1).pdf" download="resume.pdf" class="download-button">Download Resume</a>
+        </div>
+    <div class="flex-item item2"><img class="image" src="C:\Users\mk\Downloads\file.png">
+    </div>
+  </div>
+  <div class="container-2"  id="about">
+    <p class="p">About</p>
+        <div class="about">
+            <p>I am passionate about creating innovative solutions and bringing ideas to life through design and technology. With a keen eye for detail and a creative mindset, I thrive on tackling complex challenges and delivering exceptional results. My goal is to continually learn and grow, pushing the boundaries of what's possible while making a meaningful impact. I am excited about the opportunity to collaborate with like-minded individuals and contribute to projects that inspire and drive positive change.</p>
+        </div>
+    </div>
+</div>
+<div class="education-container">
+  
+  <div class="education-option" id="10th">SSC</div>
+  <div class="education-option" id="diploma">Diploma</div>
+  <div class="education-option" id="btech">B.Tech</div>
+</div>
+
+<div class="details" id="details-10th">
+  <div class="box">
+  <p>Sadhana english medium school, divili - ssc</p>
+  <p>April 2019 - Feb 2020</p>
+  <p>Aggregate: 87%</p>
+</div>
+</div>
+<div class="details" id="details-diploma">
+  <div class="box">
+  <p>Aditya engineering college, surampalem-(diploma)</p>
+  <p>2020 - 2023</p>
+  <p>Branch : electronic and communication engineering</p>
+  <p>aggregate: 85%</p>
+</div>
+</div>
+<div class="details" id="details-btech">
+  <div class="box">
+  <p>Bharath institute of higher education and research, chennai-(B.tech)</p>
+  <p>2023-2026</p>
+  <p>Branch: computer science and engineering.</p>
+  <p>Pursuing 2nd year B.tech - CSE</p>
+</div>
+</div>
+<div class="skills" id="skills">
+<p class="p">Skills</p>
+<div class="flex-container1">
+    <div class="flex-item1">C/C++<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\c-c++ pic.png">
+</div>
+    <div class="flex-item1">Python<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\python-curso.jpg"></div>
+    <div class="flex-item1">IoT<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\iot.jpg"></div>
+    <div class="flex-item1">HTML/CSS<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\html-css.jpg"></div>
+  </div>
+  </div>
+<div class="projects" id="portfolio">
+<p class="p">Projects</p>
+<div class="flex-container1">
+    <div class="flex-item2">Women safety device<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\women safety.jpg"><p>"Empowering women's safety through innovative device integration."</p>
+</div>
+    <div class="flex-item2">Ecobin-X<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\ecobin-x.jpg"><br><p>"EcoBin-X innovates waste management through IoT integration and web development."</p></div>
+    <div class="flex-item2">Smart surveillance robot<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\smart survillence.jpg"><br><p>"Enhanced surveillance capabilities with cutting-edge robotics technology."</p></div>
+    <div class="flex-item2">Accident alerting system<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\accident-alert.jpg"><p>"Real-time accident alerting system leveraging advanced technology."</p></div>
+  </div>
+  </div>
+  <div class="contact" id="contact">
+  <p class="p">Contact Me</p>
+  <div class="flex-container2">
+    <div class="flex-item3"> 
+    <div class="container3">
+    <form action="#">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
+    <label for="number">Phone Number:</label>
+    <input type="text" id="number" name="number" placeholder="Enter your phone number" required>
+    
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+    
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+    
+    <input type="submit" value="Submit">
+  </form>
+  </div>
+    </div>
+    <div class="flex-item3"> <br> <p class="ads">Address:<span class="ad">  BHARATH UNIVERSITY 173, Agaram Main Rd., Selaiyur, Chennai, Tamil Nadu 600073.</span></p><p class="ads">Mobile no:<span class="ad"> +91 7731943179</span></p><p class="ads">G-mail:<span class="ad"> mouligangadharpedireddy@gmail.com</span></p><p class="ads">Official site:<span><a class="adi" href="https://sites.google.com/view/easytronics/home"> Easitronics</span></p>
+    <p class="ads">Linked-in:<span><a class="adi" href="https://www.linkedin.com/in/mouli-gangadhar-pedireddy/"> Click here</span></p>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d685.4241801086396!2d80.14293034623506!3d12.905829889216404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525ed7fdb263db%3A0xd5cae9f2d4bd647f!2s19%2C%20Mohan%20Nagar%2C%20Padamavathy%20Nagar%2C%20Tiruvanchery%2C%20Selaiyur%2C%20Chennai%2C%20Tamil%20Nadu%20600073!5e0!3m2!1sen!2sin!4v1714826831425!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</div>
+<div class="dec"><p>Declaration:<span> I hereby declare that the above details are correct and true
+to the best of my knowledge</span></p><div>
+
+<footer>
+<div class="footer"><p>Proudly created by mouli_gangadhara_pedireddy</p><span><div>
+</footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
