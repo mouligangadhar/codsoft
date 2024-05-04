@@ -1,124 +1,436 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="index.css">
-    </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="#portfolio">Projects</a></li>
-                <li class="contact-button"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding:0px;
+    font-family: "Arial",sans-serif;
+}
 
-<div class="flex-container" id="home">
-    <div class="flex-item"><p class="home">Mouli Gangadhar Pedireddy<br>
-            <p class="ho">IoT Developer | Front end | Enterprenur | Innovator</p><br>
-         <a href="C:\Users\mk\OneDrive\Desktop\resume of mouli gangadhar pedireddy (1).pdf" download="resume.pdf" class="download-button">Download Resume</a>
-        </div>
-    <div class="flex-item item2"><img class="image" src="C:\Users\mk\Downloads\file.png">
-    </div>
-  </div>
-  <div class="container-2"  id="about">
-    <p class="p">About</p>
-        <div class="about">
-            <p>I am passionate about creating innovative solutions and bringing ideas to life through design and technology. With a keen eye for detail and a creative mindset, I thrive on tackling complex challenges and delivering exceptional results. My goal is to continually learn and grow, pushing the boundaries of what's possible while making a meaningful impact. I am excited about the opportunity to collaborate with like-minded individuals and contribute to projects that inspire and drive positive change.</p>
-        </div>
-    </div>
-</div>
-<div class="education-container">
+header {
+    padding: 20px;
+    background-color: #333;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition effect */
+}
+
+nav ul li a:hover {
+    color: #ffa500; /* Change color on hover */
+}
+.contact-button a {
+    border-radius:5px;
+    border: 2px solid yellow;
+    padding: 5px 10px; 
+}
+.home {
+    font-weight: bolder;
+    font-family: "Arial", sans-serif;
+    font-size: 40px;
+    margin-bottom: 0px;
+    margin-top: 125px;
+    color: #033E3E; /* Set text color to red */
+    text-shadow: 2px 2px 4px white, -2px -2px 4px white, 2px -2px 4px white, -2px 2px 4px white; /* White shadow around the text */
+}
+
+.flex-container {
+  display: flex;
+  height: 50vh;
+  flex-direction: row;
+
+}
+
+.flex-item {
+  flex: 1;
+  padding: 20px;
+  /*border: 1px solid #ccc;*/
+  text-align: center;
+}
+.ho{
+    font-weight: bolder;
+    font-family: "Arial",sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+
+}
+
+.image{
+    width: 25vw;
+    height: 50vh;
+}
+
+.download-button {
+  background-color: #333; /* Dark background color */
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bolder;
+  border: 1px solid #ffa500;
+}
+
+.download-button:hover {
+  background-color:  #ffa500; /* Lighter color on hover */
+}
+.container-2 {
+    padding: 30px;
+    background-color: #1f1f1f;
+}
+.p {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffa500;
+    position: relative; /* Added */
+}
+
+.p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Changed from top */
+    height: 2px; /* Adjust as needed */
+    width: 100%;
+    background-color: #ffa500;
+    transform: scaleX(0); /* Initially not visible */
+    transform-origin: bottom;
+    transition: transform 0.3s ease; /* Transition effect */
+}
+
+.p:hover::after {
+    transform: scaleX(1); /* Scale up to show underline */
+}
+
+.about {
+    background-color: #1f1f1f;
+}
+
+.about p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.education-container {
+  display: flex;
+}
+
+.education-option {
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 50px;
+  border: 1px solid #ffa500;
+  border-radius: 5px;
+  text-align: center;
+  width: 40vw;
+  color: #ffa500;
+  font-weight: bold;
+  margin-left: 50px;
+  transition: transform 0.3s ease; /* Added transition property for transform and border */
+}
+
+.education-option:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  border: 2px solid #ffa500; /* Border increase on hover */
+}
+
+
+.details {
+  display: none;
+  text-align: center;
+}
+
+.details.active {
+  display: block;
+}
+.box{
+    background-color: #333;
+    padding:30px;
+    width: 40vw;
+    border-radius: 20px;
+    border: 3px solid #ffa500;
+    margin-top: 20px;
+    margin-left: 25%;
+}
+.box p{
+    font-family:"poppins", sans-serif ;
+}
+.skills{
+    margin-top: 30px;
+}
+.flex-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.flex-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.flex-item1 {
+  flex: 1 0 300px;
+  border: 1px solid #ffa500;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  text-align: center;
+  height: 15vh;
+  max-width: 25%;
+  background-color: #333;
+  color: #ffa500;
+  font-weight: bolder;
+}
+
+.flex-item1:hover {
+  animation: zoomIn 0.5s forwards;
+}
+
+.flex-item1:active {
+  animation: zoomOut 0.5s forwards;
+}
+.flex-item2 {
+  flex: 1 0 300px;
+  border: 1px solid #ffa500;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  text-align: center;
+  height: 25vh;
+  max-width: 25%;
+  background-color: #333;
+  color: #ffa500;
+  font-weight: bolder;
+}
+
+.flex-item2:hover {
+  animation: zoomIn 0.5s forwards;
+}
+
+.flex-item2:active {
+  animation: zoomOut 0.5s forwards;
+}
+.img{
+    border-radius: 10px;
+    margin-top: 10px;
+    height:12vh;
+    width:10vw;
+     border: 1px solid #ffa500;
+}
+.flex-item2 p{
+color: white;
+}
+.flex-item3{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.ads{
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+}
+.ad{
+    font-size: 14px;
+    color:ghostwhite;
+}
+.adi{
+    font-size: 20px;
+    color: lightgoldenrodyellow;
+    text-decoration: none;
+}
+.flex-item3 {
+  flex: 1;
+  box-shadow: 0 0 10px #ffa500;
+  padding: 10px;
+  margin-left: 2%;
+  margin-right: 2%;  
+  border-radius: 20px;
+  text-align: center;
+  height: 67vh;
+  max-width: 100%;
+  background-color: #333;
+  color: #ffa500;
+  font-weight: bolder;
+}
+.map{
+    width: 400px;
+    height: 230px;
+    border-radius: 5px;
+     border: 1px solid #ffa500;
+}
+.container3 {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+    height:60vh;
+    margin-left: 30px;
+  }
   
-  <div class="education-option" id="10th">SSC</div>
-  <div class="education-option" id="diploma">Diploma</div>
-  <div class="education-option" id="btech">B.Tech</div>
-</div>
+  .container3 label {
+    font-weight: bold;
+    margin-bottom: 2px;
+    display: block;
+    font-size: 18px;
+  }
+  
+  .container3 input[type="text"],
+  .container3 input[type="email"],
+  .container3 textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ffa500;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .container3 textarea {
+    height: 100px;
+  }
+  
+  .container3 input[type="submit"] {
+    background-color: #333; /* Dark background color */
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bolder;
+  border: 1px solid #ffa500;
+  }
+  
+  .container3 input[type="submit"]:hover {
+    background-color: #ffa500;
+  }
+.dec{
+    margin-top: 40px;
+}
+.dec p{
+    text-align: center;
+    color: #ffa500 ;
+}
+.dec span{
+    color: white;
+}
 
-<div class="details" id="details-10th">
-  <div class="box">
-  <p>Sadhana english medium school, divili - ssc</p>
-  <p>April 2019 - Feb 2020</p>
-  <p>Aggregate: 87%</p>
-</div>
-</div>
-<div class="details" id="details-diploma">
-  <div class="box">
-  <p>Aditya engineering college, surampalem-(diploma)</p>
-  <p>2020 - 2023</p>
-  <p>Branch : electronic and communication engineering</p>
-  <p>aggregate: 85%</p>
-</div>
-</div>
-<div class="details" id="details-btech">
-  <div class="box">
-  <p>Bharath institute of higher education and research, chennai-(B.tech)</p>
-  <p>2023-2026</p>
-  <p>Branch: computer science and engineering.</p>
-  <p>Pursuing 2nd year B.tech - CSE</p>
-</div>
-</div>
-<div class="skills" id="skills">
-<p class="p">Skills</p>
-<div class="flex-container1">
-    <div class="flex-item1">C/C++<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\c-c++ pic.png">
-</div>
-    <div class="flex-item1">Python<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\python-curso.jpg"></div>
-    <div class="flex-item1">IoT<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\iot.jpg"></div>
-    <div class="flex-item1">HTML/CSS<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\html-css.jpg"></div>
-  </div>
-  </div>
-<div class="projects" id="portfolio">
-<p class="p">Projects</p>
-<div class="flex-container1">
-    <div class="flex-item2">Women safety device<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\women safety.jpg"><p>"Empowering women's safety through innovative device integration."</p>
-</div>
-    <div class="flex-item2">Ecobin-X<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\ecobin-x.jpg"><br><p>"EcoBin-X innovates waste management through IoT integration and web development."</p></div>
-    <div class="flex-item2">Smart surveillance robot<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\smart survillence.jpg"><br><p>"Enhanced surveillance capabilities with cutting-edge robotics technology."</p></div>
-    <div class="flex-item2">Accident alerting system<br><img class="img" src="C:\Users\mk\OneDrive\Desktop\porfolio\assets\accident-alert.jpg"><p>"Real-time accident alerting system leveraging advanced technology."</p></div>
-  </div>
-  </div>
-  <div class="contact" id="contact">
-  <p class="p">Contact Me</p>
-  <div class="flex-container2">
-    <div class="flex-item3"> 
-    <div class="container3">
-    <form action="#">
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-    
-    <label for="number">Phone Number:</label>
-    <input type="text" id="number" name="number" placeholder="Enter your phone number" required>
-    
-    <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-    
-    <label for="message">Your Message:</label>
-    <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-    
-    <input type="submit" value="Submit">
-  </form>
-  </div>
-    </div>
-    <div class="flex-item3"> <br> <p class="ads">Address:<span class="ad">  BHARATH UNIVERSITY 173, Agaram Main Rd., Selaiyur, Chennai, Tamil Nadu 600073.</span></p><p class="ads">Mobile no:<span class="ad"> +91 7731943179</span></p><p class="ads">G-mail:<span class="ad"> mouligangadharpedireddy@gmail.com</span></p><p class="ads">Official site:<span><a class="adi" href="https://sites.google.com/view/easytronics/home"> Easitronics</span></p>
-    <p class="ads">Linked-in:<span><a class="adi" href="https://www.linkedin.com/in/mouli-gangadhar-pedireddy/"> Click here</span></p>
-    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d685.4241801086396!2d80.14293034623506!3d12.905829889216404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525ed7fdb263db%3A0xd5cae9f2d4bd647f!2s19%2C%20Mohan%20Nagar%2C%20Padamavathy%20Nagar%2C%20Tiruvanchery%2C%20Selaiyur%2C%20Chennai%2C%20Tamil%20Nadu%20600073!5e0!3m2!1sen!2sin!4v1714826831425!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-</div>
-</div>
-<div class="dec"><p>Declaration:<span> I hereby declare that the above details are correct and true
-to the best of my knowledge</span></p><div>
+.footer{
+border-radius: 20px;
+   background-color: #333;
+   height: 50px;
+}
+.footer p{
+     padding-top: 15px;
+    font-size: 18px;
+}
 
-<footer>
-<div class="footer"><p>Proudly created by mouli_gangadhara_pedireddy</p><span><div>
-</footer>
+@media screen and (max-width: 800px) {
+.image{
+  display:none;
+}
+.item2 {
+  display: none;
+}
+.education-option {
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 50vw;
+  margin-left: 20px;
 
-    <script src="index.js"></script>
-</body>
-</html>
+}
+.flex-container1 {
+  display: flex;
+  margin-left: 10%;
+}
+.flex-item1 {
+  flex: 1 0 300px;
+  border: 1px solid #ffa500;
+  padding: 20px;
+  margin-left: 5%;
+  margin-right: 10%;
+  border-radius: 20px;
+  text-align: center;
+  height: 15vh;
+  max-width: 100%;
+  background-color: #333;
+  color: #ffa500;
+  font-weight: bolder;
+}
+.flex-item2 {
+  flex: 1 0 300px;
+  border: 1px solid #ffa500;
+  padding: 20px;
+  margin-left: 5%;
+  margin-right: 10%;  
+  border-radius: 20px;
+  text-align: center;
+  height: 25vh;
+  max-width: 100%;
+  background-color: #333;
+  color: #ffa500;
+  font-weight: bolder;
+}
+.flex-item3 {
+  flex: 1 0 300px;
+  border: 1px solid #ffa500;
+  padding: 20px;
+  margin-left: 5%;
+  margin-right: 10%;  
+  border-radius: 20px;
+  text-align: center;
+  height: 35vh;
+  max-width: 100%;
+  background-color: #333;
+  color: #ffa500;
+  font-weight: bolder;
+  margin-bottom: 15px;
+}
+.img{
+    border-radius: 10px;
+    margin-top: 10px;
+    height:12vh;
+    width:40vw;
+     border: 1px solid #ffa500;
+}
+}
